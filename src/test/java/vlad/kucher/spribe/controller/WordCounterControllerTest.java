@@ -48,4 +48,10 @@ public class WordCounterControllerTest extends AbstractControllerTest {
         int count = JsonUtil.readValue(action.andReturn().getResponse().getContentAsString(), Integer.class);
         assertEquals(count, 1);
     }
+
+    @Test
+    public void testInvalidWord() throws Exception {
+        mockMvc.perform(put(REST_URL + "1_%"))
+                .andExpect(status().isUnprocessableEntity());
+    }
 }

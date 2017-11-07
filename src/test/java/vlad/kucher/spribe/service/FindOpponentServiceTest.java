@@ -52,8 +52,7 @@ public class FindOpponentServiceTest extends AbstractServiceTest {
 
     @Test
     public void testOpponentNotFound() throws Exception {
-        service.findOpponent(PLAYER3);
-        service.findOpponent(PLAYER3);
+        service.clear();
 
         thrown.expect(OpponentNotFoundException.class);
         thrown.expectMessage("Opponent not found");

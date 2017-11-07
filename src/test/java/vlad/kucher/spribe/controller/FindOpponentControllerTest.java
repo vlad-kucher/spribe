@@ -54,4 +54,21 @@ public class FindOpponentControllerTest extends AbstractControllerTest {
         assertEquals(PLAYER1, opponent);
     }
 
+    @Test
+    public void testOpponentNotFound() throws Exception {
+        service.clear();
+
+        mockMvc.perform(post(REST_URL)
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(JsonUtil.writeValue(PLAYER3)))
+                .andExpect(status().isNotFound());
+    }
+
+    @Test
+    public void testInvalidPlayer() throws Exception {
+        mockMvc.perform(put(REST_URL)
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(JsonUtil.writeValue(new Player(""))))
+                .andExpect(status().isUnprocessableEntity());
+    }
 }
