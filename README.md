@@ -1,2 +1,6 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/44295576ab5e44c1b9b3524d78b69b67)](https://www.codacy.com/app/vlad-kucher/spribe?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vlad-kucher/spribe&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/vlad-kucher/spribe.svg?branch=master)](https://travis-ci.org/vlad-kucher/spribe)
+[![Dependency Status](https://www.versioneye.com/user/projects/5a0236cd15f0d72ed30311b0/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5a0236cd15f0d72ed30311b0)
+
 1.	Word Counter - написать сервис, которому можно передавать слова. По запросу он должен возвращать число, которое показывает, сколько раз было передано определенное слово без учета регистра (ignoring case). Сервис должен корректно работать в многопоточной среде, т.е. быть thread-safe.
 2.	Find Opponent - написать сервис, которому можно передавать игроков, которые готовы к игре. У игрока есть имя и рейтинг (double). По запросу сервис должен возвращать оппонента для определенного игрока, по принципу самый ближайший по рейтингу (как в большую, так и в меньшую сторону); при этом найденный оппонент должен быть удален из списка игроков, которые готовы к игре.
