@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.web.servlet.ResultActions;
 import vlad.kucher.spribe.service.WordCounterService;
-import vlad.kucher.spribe.util.JsonUtil;
+import vlad.kucher.spribe.util.json.JsonUtil;
 
 import static org.junit.Assert.*;
 import static vlad.kucher.spribe.TestData.WORD;

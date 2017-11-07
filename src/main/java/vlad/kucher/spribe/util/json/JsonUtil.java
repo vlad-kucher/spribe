@@ -1,4 +1,4 @@
-package vlad.kucher.spribe.util;
+package vlad.kucher.spribe.util.json;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 

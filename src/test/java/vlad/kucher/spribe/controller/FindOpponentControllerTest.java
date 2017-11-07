@@ -7,7 +7,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.ResultActions;
 import vlad.kucher.spribe.model.Player;
 import vlad.kucher.spribe.service.FindOpponentService;
-import vlad.kucher.spribe.util.JsonUtil;
+import vlad.kucher.spribe.util.json.JsonUtil;
 
 import static org.junit.Assert.*;
 import static vlad.kucher.spribe.TestData.PLAYER1;
