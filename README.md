@@ -26,10 +26,14 @@ REST uri     |    HTTP метод | Принимает | Возвращает
 **Примеры CURL:**
 
 * Получаем count для слова "test":
+
 `curl http://localhost:8080/rest/words/test`
 * Передаем слово "test":
+
 `curl -X PUT http://localhost:8080/rest/words/test`
 * Добавляем игрока готового к игре:
+
 `curl -X PUT -d '{"name":"player1", "rating":1.1}' -H 'Content-Type: application/json' http://localhost:8080/rest/players`
 * Получаем оппонента для переданного игрока:
+
 `curl -X POST -d '{"name":"player2", "rating":2}' -H 'Content-Type: application/json' http://localhost:8080/rest/players`
