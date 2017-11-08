@@ -45,8 +45,7 @@ public class WordCounterControllerTest extends AbstractControllerTest {
                 .andExpect(status().isOk())
                 .andDo(print());
 
-        int count = JsonUtil.readValue(action.andReturn().getResponse().getContentAsString(), Integer.class);
-        assertEquals(count, 1);
+        assertTrue(Integer.valueOf(action.andReturn().getResponse().getContentAsString()) == 1);
     }
 
     @Test
