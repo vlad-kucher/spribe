@@ -51,6 +51,12 @@ public class FindOpponentServiceTest extends AbstractServiceTest {
     }
 
     @Test
+    public void testFindOpponent4() throws Exception {
+        service.addPlayer(PLAYER3);
+        assertEquals(service.findOpponent(PLAYER3), PLAYER1);
+    }
+
+    @Test
     public void testOpponentNotFound() throws Exception {
         service.clear();
 
