@@ -9,7 +9,6 @@ import vlad.kucher.spribe.service.WordCounterService;
 import static org.junit.Assert.*;
 import static vlad.kucher.spribe.TestData.WORD;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 /**
@@ -30,8 +29,7 @@ public class WordCounterControllerTest extends AbstractControllerTest {
     @Test
     public void testAddWord() throws Exception {
         mockMvc.perform(put(REST_URL + WORD))
-                .andExpect(status().isOk())
-                .andDo(print());
+                .andExpect(status().isOk());
 
         assertEquals(service.getWordCount(WORD), 1);
     }
@@ -41,8 +39,7 @@ public class WordCounterControllerTest extends AbstractControllerTest {
         service.addWord(WORD);
 
         ResultActions action = mockMvc.perform(get(REST_URL + WORD))
-                .andExpect(status().isOk())
-                .andDo(print());
+                .andExpect(status().isOk());
 
         assertTrue(Integer.valueOf(action.andReturn().getResponse().getContentAsString()) == 1);
     }
