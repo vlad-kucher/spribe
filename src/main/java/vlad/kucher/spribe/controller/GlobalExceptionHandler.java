@@ -35,8 +35,6 @@ public class GlobalExceptionHandler {
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR) // 500
     @ExceptionHandler(Exception.class)
     public ErrorInfo handleError(HttpServletRequest req, Exception e) {
-        System.out.println(e.getMessage());
-        System.out.println(e.getClass().getSimpleName());
         return new ErrorInfo(req.getRequestURL().toString(), e);
     }
 }
