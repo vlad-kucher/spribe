@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 import vlad.kucher.spribe.model.Player;
 import vlad.kucher.spribe.util.exception.OpponentNotFoundException;
 
+import java.util.NavigableSet;
 import java.util.concurrent.ConcurrentSkipListSet;
 
 import static vlad.kucher.spribe.util.PlayerUtil.checkPlayer;
@@ -14,7 +15,7 @@ import static vlad.kucher.spribe.util.PlayerUtil.checkPlayer;
 @Service
 public class FindOpponentService {
 
-    private ConcurrentSkipListSet<Player> players = new ConcurrentSkipListSet<>(
+    private NavigableSet<Player> players = new ConcurrentSkipListSet<>(
             (p1, p2) ->
             Double.compare(p1.getRating(), p2.getRating()) == 0 ?
             p1.getName().compareTo(p2.getName()) : Double.compare(p1.getRating(), p2.getRating())

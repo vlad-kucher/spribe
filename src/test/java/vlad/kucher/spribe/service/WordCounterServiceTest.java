@@ -39,10 +39,9 @@ public class WordCounterServiceTest extends AbstractServiceTest {
 
     @Test
     public void testIgnoringCase() throws Exception {
-        assertEquals(service.getWordCount(WORD), 0);
-        service.addWord("Test");
-        service.addWord("TEST");
-        service.addWord("test");
+        service.addWord(WORD);
+        service.addWord(WORD.toLowerCase());
+        service.addWord(WORD.toUpperCase());
         assertEquals(service.getWordCount(WORD), 3);
     }
 

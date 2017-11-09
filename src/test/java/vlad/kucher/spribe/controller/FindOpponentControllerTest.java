@@ -15,13 +15,12 @@ import static vlad.kucher.spribe.TestData.PLAYER2;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static vlad.kucher.spribe.TestData.PLAYER3;
+import static vlad.kucher.spribe.controller.FindOpponentController.REST_URL;
 
 /**
  * Created by Vlad on 07.11.2017.
  */
 public class FindOpponentControllerTest extends AbstractControllerTest {
-
-    private static final String REST_URL = FindOpponentController.REST_URL;
 
     @Autowired
     private FindOpponentService service;

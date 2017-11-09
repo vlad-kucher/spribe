@@ -10,7 +10,7 @@ public class TestData {
     public static final Player PLAYER2 = new Player("player2", 100);
     public static final Player PLAYER3 = new Player("player3", 70);
 
-    public static final String WORD = "test";
+    public static final String WORD = "Test";
 
     private TestData(){
     }
